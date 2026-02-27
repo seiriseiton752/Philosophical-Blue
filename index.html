@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophical Blue | 哲学的ToDoリスト</title>
+    <meta name="description" content="深淵な思想と共鳴するタスク管理。ブルーの閃光が、あなたの無意味な日常を哲学へと変える。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="screenGlow" class="screen-glow"></div>
+    <main class="app-container">
+        <header>
+            <h1 class="title">Philosophical <span style="color: white; opacity: 0.5;">Blue</span></h1>
+        </header>
+
+        <section class="input-section">
+            <div class="input-meta">
+                <select id="categorySelect" aria-label="カテゴリーを選択">
+                    <option value="" disabled selected>Category</option>
+                    <option value="生存">生存</option>
+                    <option value="責務">責務</option>
+                    <option value="関係">関係</option>
+                    <option value="探究">探究</option>
+                    <option value="内省">内省</option>
+                </select>
+                <input type="date" id="deadlineInput" aria-label="期限を設定">
+            </div>
+            <div class="input-main">
+                <input type="text" id="taskInput" placeholder="New Task" aria-label="タスクを入力">
+                <button id="addTaskBtn">ADD</button>
+            </div>
+        </section>
+
+        <div id="taskStats" class="task-stats"></div>
+
+        <section class="todo-section">
+            <div id="taskList" class="task-list">
+                <!-- Tasks will be injected here -->
+            </div>
+            <div class="finalize-area">
+                <button id="finalizeBtn" class="finalize-btn">FINALIZE DAY</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Celebration Containers -->
+    <div id="comboContainer" class="combo-container"></div>
+    <div id="finalOverlay" class="final-overlay hidden">
+        <div class="light-burst" id="lightBurst"></div>
+        <div class="complete-text">Complete</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
